@@ -3,11 +3,24 @@ using System.Collections;
 
 
 public class MapCollision: MonoBehaviour {
-	/*
-	void OnCollisionEnter(Collision col) {
+
+	void OnTriggerEnter2D(Collider2D col) {
 		if(col.gameObject.name == "character") {
-			Enemy.activate = true;
+			foreach(GameObject child in gameObject.transform) {
+				if (child.gameObject.tag == "Enemy") {
+					child.gameObject.GetComponent<Enemy>().setActivate (true);
+				}
+			}
 		}
 	}
-	*/
+
+	void OnTriggerExit2D(Collider2D col) {
+		if (col.gameObject.name == "character") {
+			foreach (GameObject child in gameObject.transform) {
+				if (child.gameObject.tag == "Enemy") {
+					child.gameObject.GetComponent<Enemy>().setActivate (false);
+				}
+			}
+		}
+	}
 }

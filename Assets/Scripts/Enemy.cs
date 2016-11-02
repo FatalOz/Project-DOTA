@@ -1,26 +1,31 @@
 using UnityEngine;
 using System.Collections;
 
-public class Enemy: MonoBehaviour {
+public class Enemy : MonoBehaviour {
 	
 	public int health;
-//<<<<<<< HEAD
-//	private bool activate;
-//	void Start()
-//   {
-//    
-//    }
-//	void Update(){
-//		if (health == 0) {
-//            Destroy(gameObject);
-//=======
-//	public bool activate;
-//	/*
-//	void Update{
-//		if (activate == true) {
-//			
-//>>>>>>> refs/remotes/FatalOz/Main-Menu
-//		}
-//	}
-//	*/
+
+	private bool activate = false;
+
+	void Start()
+    {
+    
+    }
+
+	void Update() {
+		if (this.health == 0) {
+			Destroy (gameObject);
+		}
+		if (this.activate) {
+			// add movement here
+			Debug.Log("Hello!");
+		}
+	}
+	public bool getActivate() {
+		return activate;	
+	}
+	public void setActivate(bool con) {
+		this.activate = con;
+	}
+
 }
