@@ -427,7 +427,7 @@ GameObject:
   - 95: {fileID: 272015852}
   - 82: {fileID: 272015851}
   m_Layer: 0
-  m_Name: Map Cell 1_0 (3)
+  m_Name: Decoration Cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -579,7 +579,7 @@ Transform:
   - {fileID: 294319541}
   - {fileID: 156966600}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &294319540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,31 +1138,31 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1177003759}
     m_Modifications:
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -931
+      value: 21.700012
       objectReference: {fileID: 0}
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -470
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1176,9 +1176,26 @@ Prefab:
       propertyPath: m_Name
       value: Skeleton Warrior clone_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &894490014 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e,
+    type: 2}
+  m_PrefabInternal: {fileID: 894490013}
 --- !u!1 &910491657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1208,7 @@ GameObject:
   - 95: {fileID: 910491658}
   - 82: {fileID: 910491661}
   m_Layer: 0
-  m_Name: Map Cell 1_0 (2)
+  m_Name: Campfire Cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1264,7 +1281,7 @@ Transform:
   - {fileID: 1400467196}
   - {fileID: 558774982}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!82 &910491661
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1553,7 +1570,7 @@ RectTransform:
   m_Children:
   - {fileID: 1611133413}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1631,6 +1648,7 @@ GameObject:
   - 4: {fileID: 1093462495}
   - 212: {fileID: 1093462494}
   - 95: {fileID: 1093462493}
+  - 61: {fileID: 1093462496}
   m_Layer: 0
   m_Name: Map Cell 1_1
   m_TagString: Untagged
@@ -1705,6 +1723,20 @@ Transform:
   - {fileID: 132377251}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!61 &1093462496
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1093462492}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 64, y: 64}
 --- !u!1001 &1119339352
 Prefab:
   m_ObjectHideFlags: 0
@@ -1833,7 +1865,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &1177003756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1844,6 +1876,7 @@ GameObject:
   - 4: {fileID: 1177003759}
   - 212: {fileID: 1177003758}
   - 95: {fileID: 1177003757}
+  - 61: {fileID: 1177003760}
   m_Layer: 0
   m_Name: Map Cell 1_0
   m_TagString: Untagged
@@ -1916,8 +1949,23 @@ Transform:
   - {fileID: 752309502}
   - {fileID: 339878705}
   - {fileID: 1997676169}
+  - {fileID: 894490014}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!61 &1177003760
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177003756}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 64, y: 64}
 --- !u!4 &1195552062 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012870918990, guid: f29a7ea997311254da7888379b535631,
@@ -2824,7 +2872,7 @@ GameObject:
   - 212: {fileID: 1805768888}
   - 95: {fileID: 1805768887}
   m_Layer: 0
-  m_Name: Map Cell 1_0 (1)
+  m_Name: Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2896,7 +2944,7 @@ Transform:
   - {fileID: 1921382273}
   - {fileID: 1119339353}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &1835539793
 Prefab:
   m_ObjectHideFlags: 0
@@ -2934,7 +2982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010077504238, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1000013794818978, guid: 64a363b9e1d7c81469af73268d1b609e, type: 2}
       propertyPath: m_Name
