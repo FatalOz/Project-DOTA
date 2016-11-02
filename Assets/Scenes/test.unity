@@ -118,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101523256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.26, y: -9.26, z: 0}
+  m_LocalPosition: {x: 9.26, y: -9.26, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -185,7 +185,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148753295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: -1.48, z: 0}
+  m_LocalPosition: {x: 9.260004, y: -1.48, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -247,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156966599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: 3.22, z: 0}
+  m_LocalPosition: {x: 9.260004, y: 3.22, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -603,7 +603,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 294319540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: 4.81, z: 0}
+  m_LocalPosition: {x: 9.260004, y: 4.81, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -796,7 +796,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524298400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: 1.65, z: 0}
+  m_LocalPosition: {x: 9.260004, y: 1.65, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1420,7 +1420,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979167216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: 0.06, z: 0}
+  m_LocalPosition: {x: 9.260004, y: 0.06, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1948,7 +1948,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1266219303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: -4.57, z: 0}
+  m_LocalPosition: {x: 9.260004, y: -4.57, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2010,7 +2010,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312596137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: -3.07, z: 0}
+  m_LocalPosition: {x: 9.260004, y: -3.07, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2197,7 +2197,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1432604163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: -6.16, z: 0}
+  m_LocalPosition: {x: 9.260004, y: -6.16, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2474,7 +2474,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1617572105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.260004, y: -7.67, z: 0}
+  m_LocalPosition: {x: 9.260004, y: -7.67, z: -0.16}
   m_LocalScale: {x: 5.94542, y: 5.945416, z: 5.945416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2534,7 +2534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72abe916e1747cf428dfdc0fa0d41b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
 --- !u!1 &1720021025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,7 +2920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72abe916e1747cf428dfdc0fa0d41b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
 --- !u!1 &1850093112
 GameObject:
   m_ObjectHideFlags: 0
