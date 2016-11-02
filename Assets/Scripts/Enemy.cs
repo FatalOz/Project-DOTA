@@ -6,10 +6,7 @@ public class Enemy : MonoBehaviour {
 	public int health;
 	private bool activate = false;
 	private bool canAttack = true;
-<<<<<<< HEAD
 	public BoxCollider2D hitBox;
-=======
->>>>>>> refs/remotes/origin/master
 	public BoxCollider2D attackBox;
 	public Transform target;//set target from inspector instead of looking in Update
     public float speed = 30f;
