@@ -1732,7 +1732,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -1813,6 +1813,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1145509358}
   - 212: {fileID: 1145509357}
+  - 61: {fileID: 1145509359}
   m_Layer: 0
   m_Name: Merchant
   m_TagString: Untagged
@@ -1866,6 +1867,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!61 &1145509359
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1145509356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.5062866, y: -1.7606891}
+  serializedVersion: 2
+  m_Size: {x: 3.5420763, y: 6.2513394}
 --- !u!1 &1177003756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,7 +1976,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -2644,6 +2659,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72abe916e1747cf428dfdc0fa0d41b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1697711624
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697711619}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 4, y: 8.7}
 --- !u!1 &1720021025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,6 +3059,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72abe916e1747cf428dfdc0fa0d41b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1847377754
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1847377750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 20, y: 28}
 --- !u!1 &1850093112
 GameObject:
   m_ObjectHideFlags: 0
