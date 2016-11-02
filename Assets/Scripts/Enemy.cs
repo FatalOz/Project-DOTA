@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour {
 	public int health;
 	private bool activate = false;
 	private bool canAttack = true;
+	public BoxCollider2D attackBox;
 	public Transform target;//set target from inspector instead of looking in Update
     public float speed = 30f;
     public bool getActivate() {
@@ -14,7 +15,6 @@ public class Enemy : MonoBehaviour {
 	public void setActivate(bool con) {
 		this.activate = con;
 	}
-
 
 	void Start()
     {
@@ -58,9 +58,9 @@ public class Enemy : MonoBehaviour {
 
 	IEnumerator wait() {
 		canAttack = false;
-		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+		attackBox.enabled = false;
 		yield return new WaitForSeconds (1);
 		canAttack = true;
-		gameObject.GetComponent<BoxCollider2D> ().enabled = true;
+		attackBox.enabled = true;
 	}
 }
