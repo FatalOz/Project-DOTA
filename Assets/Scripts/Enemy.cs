@@ -5,8 +5,9 @@ public class Enemy : MonoBehaviour {
 	
 	public int health;
 	private bool activate = false;
-    public Transform target;//set target from inspector instead of looking in Update
-    public float speed = 0.1f;
+	private bool canAttack = true;
+	public Transform target;//set target from inspector instead of looking in Update
+    public float speed = 30f;
     public bool getActivate() {
 		return activate;	
 	}
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour {
 
 	void Start()
     {
-    
+		target = GameObject.FindGameObjectWithTag ("Player").transform;
     }
 
 	void Update() {
@@ -34,7 +35,7 @@ public class Enemy : MonoBehaviour {
 				}
 			}
 		}
-		if (activate) {
+		if (activate && canAttack) {
             Vector3 direction = target.position - transform.position;
             direction = direction.normalized;
             //move towards the player
@@ -46,15 +47,20 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
-		while (col.gameObject.name == "character") {
-			col.gameObject.GetComponent<Character> ().health -= 1;
-			StartCoroutine (wait ());
-			Debug.Log ("Pow!");
-
+		if (col.gameObject.name == "character") {
+			if (canAttack) {
+				col.gameObject.GetComponent<Character> ().health -= 1;
+				Debug.Log ("Pow!");
+				StartCoroutine (wait ());
+			}
 		}
 	}
 
 	IEnumerator wait() {
-		yield return new WaitForSecondsRealtime (1f);
+		canAttack = false;
+		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+		yield return new WaitForSeconds (1);
+		canAttack = true;
+		gameObject.GetComponent<BoxCollider2D> ().enabled = true;
 	}
 }
