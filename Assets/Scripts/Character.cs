@@ -12,11 +12,10 @@ public class Character : MonoBehaviour {
 	}	
 	void Update() {
 		if (health == 0) {
-			Destroy (gameObject);
-			Debug.Log ("Game Over.....");
+			Time.timeScale = 0;
+			GameObject.Find ("youded").GetComponent<CanvasGroup>().alpha = 1f;
 		}
 		if(damagebreak == true){
-			Debug.Log ("taking damage");
 			StartCoroutine ("color");
 		}
 		else
