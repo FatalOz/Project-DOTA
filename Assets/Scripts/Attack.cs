@@ -21,18 +21,19 @@ public class Attack : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) == true)
         {
             RaycastHit2D[] results = new RaycastHit2D[3];
-
-            attackArea.Cast(directionRight, results, 0, false);
             c_anim.SetBool("attacking", true);
-            foreach(RaycastHit2D enemy in results)
+            if (attackArea.Cast(directionRight, results, 0, false) > 0)
             {
-                print("HIT");
-                Enemy hitEnemy = enemy.collider.GetComponent<Enemy>();
-                SpriteRenderer e_sprite = enemy.collider.GetComponent<SpriteRenderer>();
-                hitEnemy.health -= 1;
-                e_sprite.color = Color.red;
-                WaitForSecondsRealtime wait = new WaitForSecondsRealtime(0.1f);
-                e_sprite.color = Color.white;
+                foreach (RaycastHit2D enemy in results)
+                {
+                    print("HIT");
+                    Enemy hitEnemy = enemy.collider.GetComponent<Enemy>();
+                    SpriteRenderer e_sprite = enemy.collider.GetComponent<SpriteRenderer>();
+                    hitEnemy.health -= 1;
+                    e_sprite.color = Color.red;
+                    WaitForSecondsRealtime wait = new WaitForSecondsRealtime(1f);
+                    e_sprite.color = Color.white;
+                }
             }
         }
         else c_anim.SetBool("attacking", false);
