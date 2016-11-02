@@ -6,6 +6,10 @@ public class Enemy : MonoBehaviour {
 	public int health;
 	private bool activate = false;
 	private bool canAttack = true;
+<<<<<<< HEAD
+=======
+	public BoxCollider2D hitBox;
+>>>>>>> refs/remotes/origin/c2
 	public BoxCollider2D attackBox;
 	public Transform target;//set target from inspector instead of looking in Update
     public float speed = 30f;
@@ -19,6 +23,13 @@ public class Enemy : MonoBehaviour {
 	void Start()
     {
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
+		if (hitBox == null) {
+			hitBox = gameObject.AddComponent<BoxCollider2D> ();
+		}
+		if (attackBox == null) {
+			attackBox = gameObject.AddComponent<BoxCollider2D> ();
+			attackBox.isTrigger = true;
+		}
     }
 
 	void Update() {
@@ -50,7 +61,6 @@ public class Enemy : MonoBehaviour {
 		if (col.gameObject.name == "character") {
 			if (canAttack) {
 				col.gameObject.GetComponent<Character> ().health -= 1;
-				Debug.Log ("Pow!");
 				StartCoroutine (wait ());
 			}
 		}
