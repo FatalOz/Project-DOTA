@@ -8,7 +8,7 @@ public class Character : MonoBehaviour {
 	void Update() {
 		if (health == 0) {
 			Destroy (gameObject);
-			Debug.Log("Game Over.....");
+			Debug.Log ("Game Over.....");
 		}
 	}
 }

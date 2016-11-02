@@ -1749,7 +1749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd676c5269f89146bf0b9e93e9e6633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
 --- !u!1001 &1119339352
 Prefab:
   m_ObjectHideFlags: 0
@@ -2003,7 +2002,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177003756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd676c5269f89146bf0b9e93e9e6633, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ea61a95adc37bb4abaf2e799a440656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
@@ -2686,9 +2685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72abe916e1747cf428dfdc0fa0d41b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  target: {fileID: 0}
-  speed: 3
 --- !u!61 &1697711624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2720,7 +2716,7 @@ GameObject:
   - 114: {fileID: 1720021033}
   m_Layer: 0
   m_Name: character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3099,12 +3095,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1847377750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72abe916e1747cf428dfdc0fa0d41b2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ce9accda05a7dd439a1ebd2130ea22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  target: {fileID: 1720021027}
-  speed: 1
+  target: {fileID: 0}
+  speed: 30
 --- !u!61 &1847377754
 BoxCollider2D:
   m_ObjectHideFlags: 0
