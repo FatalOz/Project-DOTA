@@ -1569,6 +1569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1611133413}
+  - {fileID: 1420829780}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
@@ -2002,7 +2003,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177003756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9a96622f786329428364c688fe1da8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4889075344376774a9e64608a3319484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
@@ -2325,6 +2326,73 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f29a7ea997311254da7888379b535631, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1420829779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1420829780}
+  - 222: {fileID: 1420829782}
+  - 114: {fileID: 1420829781}
+  m_Layer: 5
+  m_Name: hitRed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1420829780
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420829779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1017826569}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 918, y: 404}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1420829781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420829779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1420829782
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1420829779}
 --- !u!1 &1432604163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2674,17 +2742,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000013794818978, guid: 64a363b9e1d7c81469af73268d1b609e,
     type: 2}
   m_PrefabInternal: {fileID: 1835539793}
---- !u!114 &1697711620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697711619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72abe916e1747cf428dfdc0fa0d41b2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1697711624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2714,7 +2771,6 @@ GameObject:
   - 61: {fileID: 1720021031}
   - 114: {fileID: 1720021032}
   - 114: {fileID: 1720021033}
-  - 114: {fileID: 1720021034}
   m_Layer: 0
   m_Name: character
   m_TagString: Player
@@ -2853,18 +2909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
---- !u!114 &1720021034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1720021025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0e3da17c3fb5b841becde7b29a33705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
+  damagebreak: 0
 --- !u!1 &1739059397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,12 +3153,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1847377750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cab5d1f8784faa4388ca782c3616595, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4bc85b56243ab46aa60a3061718b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  target: {fileID: 0}
-  speed: 30
+  health: 10
+  target: {fileID: 1720021027}
+  speed: 20
 --- !u!61 &1847377754
 BoxCollider2D:
   m_ObjectHideFlags: 0
