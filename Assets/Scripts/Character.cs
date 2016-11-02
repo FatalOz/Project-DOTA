@@ -16,7 +16,7 @@ public class Character : MonoBehaviour {
 			GameObject.Find ("youded").GetComponent<CanvasGroup>().alpha = 1f;
 		}
 		if(damagebreak == true){
-			StartCoroutine ("color");
+			StartCoroutine ("color", gameObject);
 		}
 		else
 		{
@@ -24,10 +24,10 @@ public class Character : MonoBehaviour {
 		}
 	}
 
-	IEnumerator color(){
-		GetComponent<SpriteRenderer> ().color = Color.red;
+	IEnumerator color(GameObject obj){
+		obj.GetComponent<SpriteRenderer> ().color = Color.red;
 		yield return new WaitForSeconds (0.3f);
-		GetComponent<SpriteRenderer> ().color = Color.white;
+		obj.GetComponent<SpriteRenderer> ().color = Color.white;
 		yield return new WaitForSeconds (0.3f);
 		damagebreak = false; 
 	}
