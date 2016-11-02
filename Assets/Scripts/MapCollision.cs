@@ -9,7 +9,9 @@ public class MapCollision: MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		if(col.gameObject.name == "character") {
 			foreach (GameObject enemy in enemies) {
-				enemy.GetComponent<Enemy>().setActivate (true);
+				if (enemy != null) {
+					enemy.GetComponent<Enemy> ().setActivate (true);
+				}
 			}
 		}
 	}
@@ -17,7 +19,9 @@ public class MapCollision: MonoBehaviour {
 	void OnTriggerExit2D(Collider2D col) {
 		if (col.gameObject.name == "character") {
 			foreach (GameObject enemy in enemies) {
-				enemy.GetComponent<Enemy>().setActivate (false);
+				if (enemy != null) {
+					enemy.GetComponent<Enemy> ().setActivate (false);
+				}
 			}
 		}
 	}
