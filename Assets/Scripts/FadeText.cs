@@ -14,7 +14,7 @@ public class FadeText : MonoBehaviour {
         CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
         while (canvasGroup.alpha > 0)
         {
-            canvasGroup.alpha -= Time.deltaTime/4;
+            canvasGroup.alpha -= Time.deltaTime/6;
             yield return null;
         }
         
