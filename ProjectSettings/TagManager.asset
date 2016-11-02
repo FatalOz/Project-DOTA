@@ -44,3 +44,6 @@ TagManager:
   - name: Held Weapon
     uniqueID: 2724895531
     locked: 0
+  - name: Nameplate
+    uniqueID: 2460458369
+    locked: 0
