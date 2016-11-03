@@ -6,6 +6,7 @@ public class Move : MonoBehaviour {
     private Rigidbody2D c_body;
     private Animator c_anim;
     [SerializeField] private float speed = 100f;
+	private bool isAttacking = false;
     private bool facingRight = true;
 	private bool isMovingUp = false;
 	private bool isMovingDown = false;
@@ -45,11 +46,19 @@ public class Move : MonoBehaviour {
 		}
 		else { isMovingRight = false; }
         
-        if ( isMovingUp || isMovingDown || isMovingLeft || isMovingRight )
-        {
-            c_anim.SetBool("moving", true);
-        }
-        else c_anim.SetBool("moving", false);
+		if (Input.GetKeyDown (KeyCode.Space) == true) {
+			isAttacking = true;
+		}
+
+		if (isAttacking == true) {
+			c_anim.SetBool ("attacking", true);
+			StartCoroutine (attack ());
+		} else if (isMovingUp || isMovingDown || isMovingLeft || isMovingRight &&) {
+			c_anim.SetBool ("moving", true);
+		} else {
+			c_anim.SetBool ("moving", false);
+			c_anim.SetBool("attacking", false);
+		}
         if(c_body.velocity.x > 0 && !facingRight)
         {
             facingRight = !facingRight;
@@ -65,4 +74,9 @@ public class Move : MonoBehaviour {
             transform.localScale = theScale;
         }
     }
+	IEnumerator attack() {
+		c_anim.SetBool ("attacking, true");
+		yield return new WaitForSeconds (0.3f);
+		c_anim.SetBool ("attacking", false);
+	}
 }
