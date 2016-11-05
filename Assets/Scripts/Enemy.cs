@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 	public int health;
 	private bool activate = false;
 	private bool canAttack = true;
-
+	private BoxCollider2D attackBox;
 	public Transform target;
 //set target from inspector instead of looking in Update
 	public float speed = 30f;
@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
 
 	void Start ()
 	{
+		attackBox = GetComponent<BoxCollider2D> ();
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 
@@ -58,7 +59,8 @@ public class Enemy : MonoBehaviour
 		if (col.gameObject.name == "character") {
 			Character character = col.gameObject.GetComponent<Character>();
 			if (canAttack) {
-				col.gameObject.GetComponent<Character> ().health -= 1;
+				character.health -= 1;
+				character.damagebreak = true; 
 				StartCoroutine (wait ());
 			}
 		}
