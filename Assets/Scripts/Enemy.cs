@@ -3,17 +3,19 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-	
+
 	public int health;
 	private bool activate = false;
 	private bool canAttack = true;
+	private BoxCollider2D attackBox;
 	public Transform target;
 //set target from inspector instead of looking in Update
 	public float speed = 30f;
 
 	public bool getActivate ()
 	{
-		return activate;	
+
+		return activate;
 	}
 
 	public void setActivate (bool con)
@@ -21,9 +23,9 @@ public class Enemy : MonoBehaviour
 		this.activate = con;
 	}
 
-
 	void Start ()
 	{
+		attackBox = GetComponent<BoxCollider2D> ();
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 
@@ -58,19 +60,18 @@ public class Enemy : MonoBehaviour
 			Character character = col.gameObject.GetComponent<Character>();
 			if (canAttack) {
 				character.health -= 1;
-				character.damagebreak = true;
-				Debug.Log ("Pow!");
+				character.damagebreak = true; 
 				StartCoroutine (wait ());
-			} 
-		} 
+			}
+		}
 	}
 
 	IEnumerator wait ()
 	{
 		canAttack = false;
-		gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+		attackBox.enabled = false;
 		yield return new WaitForSeconds (1);
 		canAttack = true;
-		gameObject.GetComponent<BoxCollider2D> ().enabled = true;
+		attackBox.enabled = true;
 	}
 }
