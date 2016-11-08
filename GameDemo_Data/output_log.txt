@@ -1,0 +1,56 @@
+Initialize engine version: 5.4.2f2 (b7e030c65c9b)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 M275X (ID=0x6820)
+    Vendor:   ATI
+    VRAM:     2029 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+Platform assembly: C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Julius\Desktop\Project-DOTA\GameDemo_Data\Managed\System.dll (this message is harmless)
+Script error: OnTriggerEnter
+This message parameter has to be of type: Collider
+The message will be ignored.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoScriptCache.cpp Line: 242)
+
+Script error: OnTriggerExit
+This message parameter has to be of type: Collider
+The message will be ignored.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoScriptCache.cpp Line: 242)
+
+desktop: 1360x768 60Hz; virtual: 1360x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.767015 ms
+The referenced script on this Behaviour (Game Object 'Richard') is missing!
+ 
+(Filename:  Line: 1656)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.196365 ms
+
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 423.
+Total: 3.101220 ms (FindLiveObjects: 0.032370 ms CreateObjectMapping: 0.034738 ms MarkObjects: 0.233696 ms  DeleteObjects: 2.798046 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.125455 ms
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 391.
+Total: 12.176712 ms (FindLiveObjects: 0.039870 ms CreateObjectMapping: 0.017369 ms MarkObjects: 0.221459 ms  DeleteObjects: 11.896829 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 28f8 -> priority: 1 
