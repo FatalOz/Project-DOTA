@@ -11,10 +11,14 @@ public class Move : MonoBehaviour {
 	private bool isMovingDown = false;
 	private bool isMovingLeft = false;
 	private bool isMovingRight = false;
+
+    private Attack attackScript;
+
     // Use this for initialization
     void Start() {
         c_body = GetComponent<Rigidbody2D>();
         c_anim = GetComponent<Animator>();
+        attackScript = gameObject.GetComponentInChildren<BoxCollider2D>().GetComponent<Attack>();
     }
     // Update is called once per frame
     void Update() {
@@ -23,8 +27,9 @@ public class Move : MonoBehaviour {
         {
             SceneManager.LoadScene("Menu");
         }
+        
         int direction = 0; //0 = not moving, 1 = up, 2 = down, 3 = left, 4 = right
-		if(Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.W) == true){
+		if(Input.GetKey(KeyCode.UpArrow) == true || Input.GetKey(KeyCode.W) == true) {
 			c_body.AddForce(new Vector2(0f, speed));
 			isMovingUp = true;
 		}
@@ -63,6 +68,16 @@ public class Move : MonoBehaviour {
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+        }
+
+        // Attacking animation
+        if (Input.GetKeyDown(KeyCode.Space) == true)
+        {
+            c_anim.SetBool("attacking", true);
+        }
+        else
+        {
+            c_anim.SetBool("attacking", false);
         }
     }
 }

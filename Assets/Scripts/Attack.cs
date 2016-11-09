@@ -1,38 +1,58 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Attack : MonoBehaviour
-{
-    private Animator c_anim;
-    private SpriteRenderer c_sprite;
-    private BoxCollider2D attackArea;
+public class Attack : MonoBehaviour {
+
+    public BoxCollider2D attackArea;
+    private GameObject[] targets = new GameObject[5];
+    public bool canAttack = true;
+    public int attackPower;
+
     // Use this for initialization
     void Start()
     {
-        c_anim = GetComponent<Animator>();
-        attackArea = GetComponentInChildren<BoxCollider2D>();
+        
     }
    
     // Update is called once per frame
-    void Update()
-    {
-        Vector2 directionRight = new Vector2(1, 0);
-        if (Input.GetKeyUp(KeyCode.Space) == true)
-        {
-            RaycastHit2D[] results = new RaycastHit2D[3];
-            c_anim.SetBool("attacking", true);
-			if (attackArea.Cast(directionRight, results, 0, true) > 0 && results[0].collider.gameObject.name == "Skeleton Warrior")
-            {
-                foreach (RaycastHit2D enemy in results)
-                {
-                    print("HIT");
-                    Enemy hitEnemy = enemy.collider.gameObject.GetComponent<Enemy>();
-                    hitEnemy.health -= 1;
-					StartCoroutine ("color", enemy.collider.gameObject);
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.Space) == true && canAttack) {
+            foreach(GameObject entity in targets) {
+                if (entity != null) {
+                    entity.GetComponent<Enemy>().health -= attackPower;
+                    StartCoroutine(color(entity));
+                    StartCoroutine(attackCooldown());
                 }
             }
         }
-        else c_anim.SetBool("attacking", false);
+    }
+
+    void OnTriggerEnter2D (Collider2D col) {
+        // Detects the hitBox in Enemy.cs
+        if (col.gameObject.tag == "Enemy" && col.Equals(col.gameObject.GetComponent<Enemy>().hitBox)) {
+            for(int i = 0; i < targets.Length; i++) {
+                if (targets[i] == null) {
+                    targets[i] = col.gameObject;
+                    return;
+                }
+                else if (targets[i].Equals(col.gameObject))
+                {
+                    return;
+                }
+            }
+        }
+    }
+
+    void OnTriggerExit2D (Collider2D col) {
+        // Detects the hitBox in Enemy.cs
+        if(col.gameObject.tag == "Enemy" && col.Equals(col.gameObject.GetComponent<Enemy>().hitBox)) {
+            for(int i = 0; i < targets.Length; i++) {
+                if(targets[i].Equals(col.gameObject)) {
+                    targets[i] = null;
+                    return;
+                }
+            }
+        }
     }
 	IEnumerator color(GameObject obj){
 		obj.GetComponent<SpriteRenderer> ().color = Color.red;
@@ -40,4 +60,9 @@ public class Attack : MonoBehaviour
 		obj.GetComponent<SpriteRenderer> ().color = Color.white;
 		yield return new WaitForSeconds (0.3f);
 	}
+    IEnumerator attackCooldown() {
+        canAttack = false;
+        yield return new WaitForSeconds(1f);
+        canAttack = true;
+    }
 }

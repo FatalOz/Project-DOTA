@@ -5,33 +5,33 @@ public class Enemy : MonoBehaviour
 {
 
 	public int health;
+    public int attackPower;
 	private bool activate = false;
 	private bool canAttack = true;
-	private BoxCollider2D attackBox;
+	public BoxCollider2D attackBox;
+    public BoxCollider2D hitBox;
 	public Transform target;
-//set target from inspector instead of looking in Update
 	public float speed = 30f;
 
-	public bool getActivate ()
-	{
-
+	public bool getActivate () {
 		return activate;
 	}
 
-	public void setActivate (bool con)
-	{
+	public void setActivate (bool con) {
 		this.activate = con;
 	}
 
 	void Start ()
 	{
-		attackBox = GetComponent<BoxCollider2D> ();
+		attackBox = gameObject.AddComponent<BoxCollider2D>();
+        attackBox.isTrigger = true;
+        hitBox = gameObject.AddComponent<BoxCollider2D>();
 		target = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 
 	void Update ()
 	{
-		if (health == 0) {
+		if (health <= 0) {
 			Destroy (gameObject);
 			GameObject[] enemies = gameObject.GetComponentInParent<MapCollision> ().enemies;
 			int index = 0;
@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
 		if (col.gameObject.name == "character") {
 			Character character = col.gameObject.GetComponent<Character>();
 			if (canAttack) {
-				character.health -= 1;
+				character.health -= attackPower;
 				character.damagebreak = true; 
 				StartCoroutine (wait ());
 			}

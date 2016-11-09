@@ -18,7 +18,7 @@ public class Character : MonoBehaviour {
 		} else {
 			GetComponent<SpriteRenderer> ().sortingOrder = 1;
 		}
-		if (health == 0) {
+		if (health <= 0) {
 			Time.timeScale = 0;
 			GameObject.Find ("youded").GetComponent<CanvasGroup>().alpha = 1f;
 		}
