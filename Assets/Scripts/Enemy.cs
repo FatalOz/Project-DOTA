@@ -35,17 +35,19 @@ public class Enemy : MonoBehaviour
 	{
 		if (health <= 0) {
             inventory.addItemToInventory(1, 2);
-			Destroy (gameObject);
+
 			GameObject[] enemies = gameObject.GetComponentInParent<MapCollision> ().enemies;
 			int index = 0;
 			foreach (GameObject enemy in enemies) {
-				if (enemy == gameObject) {
+				if (enemy.Equals(gameObject)) {
 					enemies [index] = null;
 					break;
 				} else {
 					index++;
 				}
 			}
+
+			Destroy (gameObject);
 		}
 		if (activate && canAttack) {
 			Vector3 direction = target.position - transform.position;

@@ -20,8 +20,10 @@ public class Attack : MonoBehaviour {
             foreach(GameObject entity in targets) {
                 if (entity != null) {
                     entity.GetComponent<Enemy>().health -= attackPower;
-                    StartCoroutine(color(entity));
-                    StartCoroutine(attackCooldown());
+					StartCoroutine(attackCooldown());
+					if (entity.GetComponent<Enemy>().health > 0) {
+						StartCoroutine (color (entity));
+					}
                 }
             }
         }
