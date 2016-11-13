@@ -4,6 +4,8 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
 
+    Inventory inventory; 
+
 	public int health;
     public int attackPower;
 	private bool activate = false;
@@ -32,6 +34,7 @@ public class Enemy : MonoBehaviour
 	void Update ()
 	{
 		if (health <= 0) {
+            inventory.addItemToInventory(1, 2);
 			Destroy (gameObject);
 			GameObject[] enemies = gameObject.GetComponentInParent<MapCollision> ().enemies;
 			int index = 0;
